@@ -79,11 +79,3 @@
       (if (or (= (remainder x 3) 0) (= (remainder x 5) 0))
           (+ x (fsum35 (- x 1)))
           (fsum35 (- x 1)))))
-
-; Question 12
-(define (fibo l)
-  (if (> (car l) 4000000)
-      0
-      (if (= (remainder (car l) 2) 0)
-          (+ (car l) (fibo (cons (+ (car l) (car (cdr l))) l)))
-          (fibo (cons (+ (car l) (car (cdr l))) l)))))
