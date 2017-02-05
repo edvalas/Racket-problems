@@ -87,3 +87,6 @@
       (if (= (remainder (car l) 2) 0)
           (+ (car l) (fibo (cons (+ (car l) (car (cdr l))) l)))
           (fibo (cons (+ (car l) (car (cdr l))) l)))))
+
+; call fibo with (list 1 0) to start the fibonacci sequence 0, 1, 1, 2, 3, 5..
+; (fibo (list 1 0))
