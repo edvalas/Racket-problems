@@ -36,10 +36,17 @@
 (define (inter list1 list2) 1)
 
 ; Question 6
+(define (sizeoflist l)
+  (if (null? l)
+      0
+      (+ 1 (sizeoflist (cdr l)))))
+
 (define (numatoms l)
   (if (null? l)
       0
-      (+ 1 (numatoms (cdr l)))))
+      (+ (if (or (pair? (car l)) (null? (car l)))
+          0
+          1)(numatoms (cdr l)))))
            
 ; question 7
 (define (forever n)
